@@ -1,0 +1,841 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Black.woff2") format("woff2"), url("../fonts/Barlow-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-BlackItalic.woff2") format("woff2"), url("../fonts/Barlow-BlackItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Bold.woff2") format("woff2"), url("../fonts/Barlow-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-BoldItalic.woff2") format("woff2"), url("../fonts/Barlow-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Extra Bold Italic.woff2") format("woff2"), url("../fonts/Barlow-Extra Bold Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Barlow-ExtraLightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Extra Bold.woff2") format("woff2"), url("../fonts/Barlow-Extra Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Light.woff2") format("woff2"), url("../fonts/Barlow-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Italic.woff2") format("woff2"), url("../fonts/Barlow-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-LightItalic.woff2") format("woff2"), url("../fonts/Barlow-LightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-ExtraLight.woff2") format("woff2"), url("../fonts/Barlow-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Medium.woff2") format("woff2"), url("../fonts/Barlow-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-MediumItalic.woff2") format("woff2"), url("../fonts/Barlow-MediumItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Regular.woff2") format("woff2"), url("../fonts/Barlow-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-SemiBold.woff2") format("woff2"), url("../fonts/Barlow-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Barlow-SemiBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-Thin.woff2") format("woff2"), url("../fonts/Barlow-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Barlow;
+  font-display: swap;
+  src: url("../fonts/Barlow-ThinItalic.woff2") format("woff2"), url("../fonts/Barlow-ThinItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Black.woff2") format("woff2"), url("../fonts/BarlowCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowcondensed;
+  font-display: swap;
+  src: url("../fonts/barlowcondensed-blackitalic.woff2") format("woff2"), url("../fonts/barlowcondensed-blackitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"), url("../fonts/BarlowCondensed-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-BoldItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-ExtraBold.woff2") format("woff2"), url("../fonts/BarlowCondensed-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-ExtraBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-ExtraLight.woff2") format("woff2"), url("../fonts/BarlowCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-ExtraLightItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-ExtraLightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Italic.woff2") format("woff2"), url("../fonts/BarlowCondensed-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Light.woff2") format("woff2"), url("../fonts/BarlowCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-LightItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-LightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Medium.woff2") format("woff2"), url("../fonts/BarlowCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-MediumItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-MediumItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"), url("../fonts/BarlowCondensed-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-SemiBoldItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-SemiBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-Thin.woff2") format("woff2"), url("../fonts/BarlowCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowCondensed-ThinItalic.woff2") format("woff2"), url("../fonts/BarlowCondensed-ThinItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-Black.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-BlackItalic.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-BlackItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-Bold.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-BoldItalic.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-extrabold.woff2") format("woff2"), url("../fonts/barlowsemicondensed-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-ExtraBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-ExtraLight.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-extralightitalic.woff2") format("woff2"), url("../fonts/barlowsemicondensed-extralightitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-italic.woff2") format("woff2"), url("../fonts/barlowsemicondensed-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-light.woff2") format("woff2"), url("../fonts/barlowsemicondensed-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-LightItalic.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-LightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-Medium.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-mediumitalic.woff2") format("woff2"), url("../fonts/barlowsemicondensed-mediumitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-Regular.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: BarlowSemiCondensed;
+  font-display: swap;
+  src: url("../fonts/BarlowSemiCondensed-SemiBoldItalic.woff2") format("woff2"), url("../fonts/BarlowSemiCondensed-SemiBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-thin.woff2") format("woff2"), url("../fonts/barlowsemicondensed-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: barlowsemicondensed;
+  font-display: swap;
+  src: url("../fonts/barlowsemicondensed-thinitalic.woff2") format("woff2"), url("../fonts/barlowsemicondensed-thinitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.form__title, .signup__title {
+  font-weight: 600;
+  color: #2a4a5c;
+  font-size: 28px;
+}
+.form__title:not(:last-child), .signup__title:not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+
+.form__subtitle, .signup__subtitle {
+  color: #7b8a92;
+  font-weight: 500;
+}
+
+body {
+  font-family: Barlow;
+  color: #2a4a5c;
+  background: #eff6ff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.wrapper {
+  overflow: hidden;
+  padding: 50px 15px;
+}
+
+.signup__container {
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.signup__preview {
+  position: relative;
+}
+.signup__logo {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 2;
+}
+.signup__logo img {
+  width: 120px;
+  height: 22px;
+}
+.signup__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.signup__content {
+  padding: 50px 50px;
+}
+.signup__title-body:not(:last-child) {
+  margin: 0px 0px 50px 0px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 25px;
+}
+.form__link {
+  width: 250px;
+  display: block;
+  padding: 15px 25px 15px 35px;
+  color: #fff;
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.form__link img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  bottom: 15px;
+  left: 15px;
+}
+.form__line {
+  margin: 50px 0px;
+  align-self: center;
+  text-transform: uppercase;
+}
+.form__line::before {
+  left: 35px;
+}
+.form__line::after {
+  right: 35px;
+}
+.form__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px 25px;
+}
+.form__input-container:not(:last-child) {
+  margin: 0px 0px 50px 0px;
+}
+.form__input {
+  border: 1px solid #eeeeee;
+  width: 250px;
+  height: 54px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0px 15px;
+  transition: all 0.15s ease 0s;
+}
+.form__input::placeholder {
+  transition: all 0.15s ease 0s;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.form__input:focus {
+  background: #fff;
+  border: 1px solid #afafaf;
+  border-left: 1px solid #3698fb;
+  border-bottom: 1px solid #3698fb;
+  border-radius: 0px 10px 0px 0px;
+  outline-color: transparent;
+  box-shadow: hsl(210deg, 80%, 42%) -2px 2px 11px;
+}
+.form__input:focus::placeholder {
+  left: 15px;
+  top: 15px;
+}
+.form__title-body:not(:last-child) {
+  margin: 0px 0px 50px 0px;
+}
+.form__title {
+  font-size: 26px;
+}
+.form__radio-container {
+  display: flex;
+  gap: 15px 20px;
+  flex-wrap: wrap;
+}
+.form__radio-container:not(:last-child) {
+  margin: 0px 0px 50px 0px;
+}
+.form__radio-body {
+  position: relative;
+}
+.form__radio {
+  position: absolute;
+  opacity: 0;
+}
+.form__radio + .form__radio-label:before {
+  content: "";
+  background: #eeeeee;
+  border-radius: 100%;
+  border: 1px solid #afafaf;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0;
+  margin: 0px 5px 0px 0px;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+.form__radio:checked + .form__radio-label:before {
+  background-color: #eeeeee;
+  border-color: #3698fb;
+  box-shadow: inset 0 0 0 4px #3698fb;
+}
+.form__radio:focus + .form__radio-label:before {
+  outline: none;
+  border-color: #3698fb;
+}
+.form__radio:disabled .form__radio-label:before {
+  box-shadow: inset 0 0 0 4px #eeeeee;
+  border-color: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 238, 238, 0.5);
+}
+.form__radio-label {
+  position: relative;
+}
+.form__icon {
+  display: inline-block;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin: 0px 0px 0px 5px;
+}
+.form__icon::after {
+  content: "i";
+  vertical-align: middle;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  padding: 0px 4px;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.form__icon::before {
+  content: attr(data-icon);
+  display: block;
+  position: absolute;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  color: #afafaf;
+  background: #fff;
+  box-shadow: 1px 1px 5px #afafaf;
+  font-size: 0.875rem;
+  top: 20px;
+  left: 50%;
+  margin: 0px 0px 0px -100px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+}
+.form__icon:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.form__checkbox-body {
+  white-space: nowrap;
+}
+.form__checkbox-body:not(:last-child) {
+  margin: 0px 0px 50px 0px;
+}
+.form__checkbox-label a {
+  color: #3698fb;
+  text-decoration: underline;
+}
+.form__button {
+  padding: 15px 25px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  background: #3698fb;
+  width: 250px;
+}
+
+.line {
+  position: relative;
+}
+.line::before, .line::after {
+  content: "";
+  position: absolute;
+  width: 6.25rem;
+  height: 1px;
+  top: 50%;
+  background: #7b8a92;
+}
+
+.facebook-link {
+  background: #255a9b;
+}
+
+.linkedin-link {
+  background: #0076b6;
+}
+
+@media (min-width: 57.5em) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .signup__container {
+    max-width: 87.5rem;
+  }
+}
+@media (min-width: 48em) {
+  .form__link:hover {
+    outline-color: transparent;
+    box-shadow: hsl(210deg, 80%, 42%) 2px 2px 22px;
+  }
+  .form__button {
+    transition: all 0.15s ease 0s;
+  }
+  .form__button:hover {
+    outline-color: transparent;
+    box-shadow: hsl(210deg, 80%, 42%) 2px 2px 22px;
+  }
+}
+@media (max-width: 68.75em) {
+  .signup__content {
+    padding: 50px 25px;
+  }
+}
+@media (max-width: 48em) {
+  .signup__title-body:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+  }
+  .signup__container {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+  }
+  .signup__preview {
+    height: 250px;
+  }
+  .form__line {
+    margin: 35px 0px;
+  }
+  .form__input-container:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+  }
+  .form__title-body:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+  }
+  .form__radio-container:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+  }
+  .form__checkbox-body:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+  }
+}
+@media (max-width: 39.375em) {
+  .form__link {
+    width: 215px;
+  }
+  .form__input {
+    width: 215px;
+  }
+  .form__checkbox-label {
+    white-space: normal;
+  }
+}
+@media (max-width: 34.375em) {
+  .form__social {
+    flex-direction: column;
+    gap: 25px 0;
+  }
+  .form__input-container {
+    flex-direction: column;
+    gap: 25px 0;
+  }
+  .form__link {
+    width: 235px;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__icon::before {
+    width: 180px;
+    left: -250%;
+  }
+}
+@media (max-width: 31.25em) {
+  .form__icon::before {
+    width: 180px;
+    left: 50%;
+  }
+}
+@media (max-width: 23.75em) {
+  .form__button {
+    width: 100%;
+  }
+}
